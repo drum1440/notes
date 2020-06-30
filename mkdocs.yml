@@ -1,1 +1,3 @@
 site_name: My Docs
+  - index.md
+  - README.md
