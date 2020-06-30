@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>README - My Docs - index.md - README.md</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">My Docs - index.md - README.md</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="./">README</a>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="..">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#laptop_4gb">laptop_4gb</a></li>
+            <li><a href="#pull-audio-from-cd">pull audio from cd</a></li>
+            <li><a href="#after-extracting-audio-from-cd-write-to-mp3-files">after extracting audio from cd, write to mp3 files</a></li>
+            <li><a href="#general-linux-commands">general Linux commands</a></li>
+            <li><a href="#mkdocs">mkdocs</a></li>
+            <li><a href="#git-laptop-4g">git (laptop 4g)</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="laptop_4gb">laptop_4gb</h1>
+<hr />
+<h2 id="pull-audio-from-cd">pull audio from cd</h2>
+<h4 id="install">install</h4>
+<p><pre>
+sudo apt install sound-juicer
+</pre></p>
+<ul>
+<li>put cd in before starting program     </li>
+<li>settings: ensure output goes to /Music/[appropriate folder]     </li>
+<li>run program with      </li>
+</ul>
+<pre>
+sound-juicer
+</pre>
+
+<ul>
+<li>select desired tracks, then "extract"     </li>
+</ul>
+<h2 id="after-extracting-audio-from-cd-write-to-mp3-files">after extracting audio from cd, write to mp3 files</h2>
+<h4 id="install_1">install</h4>
+<p><pre>
+sudo apt install soundconverter
+</pre></p>
+<ul>
+<li>run program with      </li>
+</ul>
+<pre>
+soundconverter
+</pre>
+
+<ul>
+<li>click on previously extracted files with “add file” (from previous step, above), “convert”     </li>
+<li>rm .ogg files when done     </li>
+</ul>
+<hr />
+<h2 id="general-linux-commands">general Linux commands</h2>
+<p><pre>
+tar -cvf name-of-archive.tar /path/to/directory-or-file
+tar -cvf name-of-archive.tar *
+</pre></p>
+<ul>
+<li>show current release     </li>
+</ul>
+<pre>
+lsb_release -a
+</pre>
+
+<ul>
+<li>this renames all files in folder from 'a b.txt' to a_b.txt     </li>
+</ul>
+<pre>
+for file in *; do mv "$file" `echo $file | tr ' ' '_'` ; done
+</pre>
+
+<hr />
+<h2 id="mkdocs">mkdocs</h2>
+<p>https://www.mkdocs.org/</p>
+<h4 id="install_2">install</h4>
+<p><pre>
+sudo apt-get install mkdocs
+</pre></p>
+<h4 id="project-layout">Project layout</h4>
+<pre><code>mkdocs.yml    # The configuration file.     
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
+</code></pre>
+<h4 id="how-to-implement">how to implement</h4>
+<pre>
+cd Documents
+mkdir z1
+cd z1
+
+mkdocs new mkdocs01     
+cd mkdocs01     
+
+mkdocs serve
+</pre>
+
+<h4 id="when-youre-ready-to-deploy">when you're ready to deploy...</h4>
+<pre>
+mkdocs build
+(base) brad@brad-U50F:~/Documents/z1/mkdocs01$ pwd
+/home/brad/Documents/z1/mkdocs01
+
+cp * -R ../../notes
+cd ../../notes
+git add .
+git commit -m "notes"
+git push
+mkdocs gh-deploy
+</pre>
+
+<p>.
+.
+INFO    -  Your documentation should shortly be available at: https://drum1440.github.io/notes/      </p>
+<hr />
+<h2 id="git-laptop-4g">git (laptop 4g)</h2>
+<ul>
+<li>create "notes" in GitHub client     </li>
+</ul>
+<pre>     
+cd Documents     
+git clone https://github.com/drum1440/notes.git     
+cd notes     
+</pre>
+
+<pre>    
+eval "$(ssh-agent -s)"     
+</pre>
+
+<pre>     
+$ ssh-add ~/.ssh/id_rsa     
+</pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

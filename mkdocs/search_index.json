@@ -19,6 +19,71 @@
             "location": "/#project-layout",
             "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
             "title": "Project layout"
+        },
+        {
+            "location": "/README/",
+            "text": "laptop_4gb\n\n\n\n\npull audio from cd\n\n\ninstall\n\n\n\nsudo apt install sound-juicer\n\n\n\n\n\nput cd in before starting program     \n\n\nsettings: ensure output goes to /Music/[appropriate folder]     \n\n\nrun program with      \n\n\n\n\n\nsound-juicer\n\n\n\n\n\n\nselect desired tracks, then \"extract\"     \n\n\n\n\nafter extracting audio from cd, write to mp3 files\n\n\ninstall\n\n\n\nsudo apt install soundconverter\n\n\n\n\n\nrun program with      \n\n\n\n\n\nsoundconverter\n\n\n\n\n\n\nclick on previously extracted files with \u201cadd file\u201d (from previous step, above), \u201cconvert\u201d     \n\n\nrm .ogg files when done     \n\n\n\n\n\n\ngeneral Linux commands\n\n\n\ntar -cvf name-of-archive.tar\u00a0/path/to/directory-or-file\ntar -cvf name-of-archive.tar *\n\n\n\n\n\nshow current release     \n\n\n\n\n\nlsb_release -a\n\n\n\n\n\n\nthis renames all files in folder from 'a b.txt' to a_b.txt     \n\n\n\n\n\nfor file in *; do mv \"$file\" `echo $file | tr ' ' '_'` ; done\n\n\n\n\n\n\nmkdocs\n\n\nhttps://www.mkdocs.org/\n\n\ninstall\n\n\n\nsudo apt-get install mkdocs\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.     \ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\nhow to implement\n\n\n\ncd Documents\nmkdir z1\ncd z1\n\nmkdocs new mkdocs01     \ncd mkdocs01     \n\nmkdocs serve\n\n\n\n\nwhen you're ready to deploy...\n\n\n\nmkdocs build\n(base) brad@brad-U50F:~/Documents/z1/mkdocs01$ pwd\n/home/brad/Documents/z1/mkdocs01\n\ncp * -R ../../notes\ncd ../../notes\ngit add .\ngit commit -m \"notes\"\ngit push\nmkdocs gh-deploy\n\n\n\n\n.\n.\nINFO    -  Your documentation should shortly be available at: https://drum1440.github.io/notes/      \n\n\n\n\ngit (laptop 4g)\n\n\n\n\ncreate \"notes\" in GitHub client     \n\n\n\n\n     \ncd Documents     \ngit clone https://github.com/drum1440/notes.git     \ncd notes     \n\n\n\n\n    \neval \"$(ssh-agent -s)\"     \n\n\n\n\n     \n$ ssh-add ~/.ssh/id_rsa",
+            "title": "README"
+        },
+        {
+            "location": "/README/#laptop_4gb",
+            "text": "",
+            "title": "laptop_4gb"
+        },
+        {
+            "location": "/README/#pull-audio-from-cd",
+            "text": "",
+            "title": "pull audio from cd"
+        },
+        {
+            "location": "/README/#install",
+            "text": "sudo apt install sound-juicer   put cd in before starting program       settings: ensure output goes to /Music/[appropriate folder]       run program with         \nsound-juicer   select desired tracks, then \"extract\"",
+            "title": "install"
+        },
+        {
+            "location": "/README/#after-extracting-audio-from-cd-write-to-mp3-files",
+            "text": "",
+            "title": "after extracting audio from cd, write to mp3 files"
+        },
+        {
+            "location": "/README/#install_1",
+            "text": "sudo apt install soundconverter   run program with         \nsoundconverter   click on previously extracted files with \u201cadd file\u201d (from previous step, above), \u201cconvert\u201d       rm .ogg files when done",
+            "title": "install"
+        },
+        {
+            "location": "/README/#general-linux-commands",
+            "text": "tar -cvf name-of-archive.tar\u00a0/path/to/directory-or-file\ntar -cvf name-of-archive.tar *   show current release        \nlsb_release -a   this renames all files in folder from 'a b.txt' to a_b.txt        \nfor file in *; do mv \"$file\" `echo $file | tr ' ' '_'` ; done",
+            "title": "general Linux commands"
+        },
+        {
+            "location": "/README/#mkdocs",
+            "text": "https://www.mkdocs.org/",
+            "title": "mkdocs"
+        },
+        {
+            "location": "/README/#install_2",
+            "text": "sudo apt-get install mkdocs",
+            "title": "install"
+        },
+        {
+            "location": "/README/#project-layout",
+            "text": "mkdocs.yml    # The configuration file.     \ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "Project layout"
+        },
+        {
+            "location": "/README/#how-to-implement",
+            "text": "cd Documents\nmkdir z1\ncd z1\n\nmkdocs new mkdocs01     \ncd mkdocs01     \n\nmkdocs serve",
+            "title": "how to implement"
+        },
+        {
+            "location": "/README/#when-youre-ready-to-deploy",
+            "text": "mkdocs build\n(base) brad@brad-U50F:~/Documents/z1/mkdocs01$ pwd\n/home/brad/Documents/z1/mkdocs01\n\ncp * -R ../../notes\ncd ../../notes\ngit add .\ngit commit -m \"notes\"\ngit push\nmkdocs gh-deploy  .\n.\nINFO    -  Your documentation should shortly be available at: https://drum1440.github.io/notes/",
+            "title": "when you're ready to deploy..."
+        },
+        {
+            "location": "/README/#git-laptop-4g",
+            "text": "create \"notes\" in GitHub client             \ncd Documents     \ngit clone https://github.com/drum1440/notes.git     \ncd notes           \neval \"$(ssh-agent -s)\"            \n$ ssh-add ~/.ssh/id_rsa",
+            "title": "git (laptop 4g)"
         }
     ]
 }

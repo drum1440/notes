@@ -4,7 +4,15 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2020-06-27</lastmod>
+     <lastmod>2020-06-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/README/</loc>
+     <lastmod>2020-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
