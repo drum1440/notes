@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>README - My Docs - index.md - README.md</title>
+        <title>README - My Docs</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -38,7 +38,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="..">My Docs - index.md - README.md</a>
+            <a class="navbar-brand" href="..">My Docs</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -195,13 +195,18 @@ git clone https://github.com/drum1440/notes.git
 cd notes     
 </pre>
 
-<pre>    
-eval "$(ssh-agent -s)"     
-</pre>
-
-<pre>     
-$ ssh-add ~/.ssh/id_rsa     
-</pre></div>
+<h4 id="regenerate-ssh-key-in-git">regenerate ssh key in Git</h4>
+<p>https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent   <br />
+<pre>
+ssh-keygen -t rsa -b 4096 -C "my Hotmail email"   <br />
+generate a new SSH key   <br />
+eval "$(ssh-agent -s)"   <br />
+ssh-add ~/.ssh/id_rsa   <br />
+Add the SSH key to your GitHub account   <br />
+( in Settings, SSH and GPG keys )   <br />
+copy id_rsa.pub data (starts with ssh-rsa...) into GitHub key box
+</pre></p>
+<p>end out of eval "$(ssh-agent -s)" as soon as you're done.</p></div>
         </div>
 
         <footer class="col-md-12">
