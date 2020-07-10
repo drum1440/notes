@@ -113,17 +113,17 @@ cd notes
 </pre>
 
 
-
-
-<pre>    
+#### regenerate ssh key in Git     
+https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent     
+<pre>
+ssh-keygen -t rsa -b 4096 -C "my Hotmail email"     
+generate a new SSH key     
 eval "$(ssh-agent -s)"     
+ssh-add ~/.ssh/id_rsa     
+Add the SSH key to your GitHub account     
+( in Settings, SSH and GPG keys )     
+copy id_rsa.pub data (starts with ssh-rsa...) into GitHub key box
 </pre>
 
-<pre>     
-$ ssh-add ~/.ssh/id_rsa     
-</pre>
-
-
-
-
+end out of eval "$(ssh-agent -s)" as soon as you're done.
 
